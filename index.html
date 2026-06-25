@@ -1,14 +1,222 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>Koichi Hayakawa Photography</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koichi Hayakawa Photography</title>
+  <meta name="description" content="Landscape and nightscape photography from Japan by Koichi Hayakawa.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+    }
+
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 8%;
+      background:
+        radial-gradient(circle at center, #222 0%, #050505 65%);
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 86px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cfcfcf;
+      margin-bottom: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 36px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    section {
+      padding: 90px 8%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      line-height: 1.9;
+    }
+
+    .intro {
+      color: #d0d0d0;
+      font-size: 17px;
+      max-width: 760px;
+    }
+
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      padding: 32px;
+      min-height: 160px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      color: #888;
+      font-size: 13px;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Koichi Hayakawa Photography</h1>
+  <header>
+    <div class="logo">Koichi Hayakawa Photography</div>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<p>Welcome to my gallery.</p>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Landscape & Nightscape Photography from Japan</h1>
+        <p>Quiet light, deep night, and the beauty of Japanese landscapes.</p>
+        <a href="#gallery" class="button">Enter Gallery</a>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p class="intro">
+        Selected works will be added here, including landscapes, night skies, Milky Way scenes,
+        and award-winning photographs from Japan and Taiwan.
+      </p>
+
+      <div class="gallery-preview">
+        <div class="card">
+          <h3>Landscape</h3>
+          <p>Mountains, sea, mist, forests, and quiet Japanese scenery.</p>
+        </div>
+        <div class="card">
+          <h3>Nightscape</h3>
+          <p>Night skies, stars, temples, towers, and scenes shaped by darkness.</p>
+        </div>
+        <div class="card">
+          <h3>Award Winners</h3>
+          <p>Selected and awarded works from Japan and international competitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="intro">
+        Koichi Hayakawa is a photographer based in Japan, working mainly with landscapes,
+        nightscapes, and scenes shaped by light, weather, and time.
+      </p>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <p class="intro">
+        TIFA Bronze Winner / BIFA Award Winner / Nika Exhibition Selected /
+        Niigata City Mayor Award / Nagaoka City Mayor Award / FIND/47 Quarter Award
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="intro">
+        For print inquiries, licensing, or photography-related requests, please contact me through
+        Instagram or email.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Koichi Hayakawa Photography. All rights reserved.
+  </footer>
 
 </body>
 </html>
