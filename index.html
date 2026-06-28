@@ -165,10 +165,9 @@
       <a href="#awards">Awards</a>
       <a href="#contact">Contact</a>
     </nav>
-    <script>
-document.querySelectorAll("img").forEach(img => {
-    img.addEventListener("contextmenu", e => e.preventDefault());
-    img.setAttribute("draggable", "false");
+   <script>
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
 });
 </script>
   </header>
