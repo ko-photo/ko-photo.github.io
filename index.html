@@ -165,11 +165,6 @@
       <a href="#awards">Awards</a>
       <a href="#contact">Contact</a>
     </nav>
-   <script>
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script>
   </header>
 
   <main>
@@ -229,6 +224,31 @@ document.addEventListener("contextmenu", function(e){
   <footer>
     © 2026 Koichi Hayakawa Photography. All rights reserved.
   </footer>
+ <script>
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener("dragstart", function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener("selectstart", function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (
+        (e.ctrlKey && e.key.toLowerCase() === "s") ||
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") ||
+        (e.ctrlKey && e.key.toLowerCase() === "u")
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
 
 </body>
 </html>
