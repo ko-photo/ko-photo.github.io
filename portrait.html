@@ -179,9 +179,13 @@ header nav a:hover {
     gap: 14px;
   }
 }
+.gallery img,
+.gallery-horizontal img,
+#photoLightbox,
+#photoLightbox img {
+    cursor: pointer;
+}
 </style>
-
-
 <div id="photoLightbox" role="dialog" aria-label="Photo viewer">
   <span id="photoClose" aria-label="Close" style="position:absolute;top:20px;right:30px;color:white;font-size:40px;cursor:pointer;line-height:1;">&times;</span>
   <img alt="Enlarged photograph">
