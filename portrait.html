@@ -33,15 +33,15 @@ h1 { text-align: center; font-size: 34px; }
   margin-bottom: 55px;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 22px;
+   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
-figure { margin: 0; }
-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
+.gallery-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 45px;
 }
 figcaption {
   text-align: center;
@@ -55,10 +55,17 @@ footer {
   padding: 45px 15px;
 }
 @media(max-width: 700px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-horizontal {
+    grid-template-columns: 1fr;
+  }
 }
 @media(max-width: 450px) {
-  .gallery { grid-template-columns: 1fr; }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -73,25 +80,27 @@ footer {
 
 <section class="gallery">
   <figure>
-    <img src="images/portrait/5W9A0958.JPG" alt="Portrait 1" loading="lazy">
+    <img src="images/portrait/5W9A0958.JPG" alt="Portrait 1">
   </figure>
   <figure>
-    <img src="images/portrait/5W9A1006-Edit.JPG" alt="Portrait 2" loading="lazy">
+    <img src="images/portrait/5W9A1006-Edit.JPG" alt="Portrait 2">
   </figure>
   <figure>
-    <img src="images/portrait/5W9A0988-Edit-2.JPG" alt="Portrait 3" loading="lazy">
+    <img src="images/portrait/5W9A0992.JPG" alt="Portrait 3">
   </figure>
   <figure>
-    <img src="images/portrait/5W9A0992.JPG" alt="Portrait 4" loading="lazy">
-  </figure>
-  <figure>
-    <img src="images/portrait/5W9A1002.JPG" alt="Portrait 5" loading="lazy">
-  </figure>
-  <figure>
-    <img src="images/portrait/5W9A0995-Edit-Edit-Edit.JPG" alt="Portrait 6" loading="lazy">
+    <img src="images/portrait/5W9A0995-Edit-Edit-Edit.JPG" alt="Portrait 4">
   </figure>
 </section>
 
+<section class="gallery-horizontal">
+  <figure>
+    <img src="images/portrait/5W9A0988-Edit-2.JPG" alt="Portrait 5">
+  </figure>
+  <figure>
+    <img src="images/portrait/5W9A1002.JPG" alt="Portrait 6">
+  </figure>
+</section>
 <p class="intro" style="margin-top:55px">
 Model: Xiaomi<br>
 Photography: Koichi Hayakawa
