@@ -74,8 +74,15 @@ footer {
 </style>
 </head>
 <body>
-<header>
-  <a href="index.html">Koichi Hayakawa Photography</a>
+<header><a href="index.html">Koichi Hayakawa Photography</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#awards">Awards</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
@@ -139,6 +146,41 @@ Photography: Koichi Hayakawa
   object-fit: contain;
 }
 </style>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #080808;
+}
+header > a {
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+header nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+header nav a:hover {
+  color: #fff;
+}
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
 
 
 <div id="photoLightbox" role="dialog" aria-label="Photo viewer">
