@@ -112,5 +112,65 @@ Photography: Koichi Hayakawa
 </main>
 
 <footer>© Koichi Hayakawa. All rights reserved.</footer>
+<style>
+.gallery img, .gallery-horizontal img {
+  cursor: zoom-in;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+@media print {
+  .gallery, .gallery-horizontal, #photoLightbox {
+    display: none !important;
+  }
+}
+#photoLightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.95);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#photoLightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+</style>
+
+<div id="photoLightbox" role="dialog" aria-label="Photo viewer">
+  <img alt="Enlarged photograph">
+</div>
+
+<script>
+const viewer = document.getElementById('photoLightbox');
+const enlarged = viewer.querySelector('img');
+
+document.querySelectorAll('.gallery img, .gallery-horizontal img')
+  .forEach(img => {
+    img.draggable = false;
+    img.addEventListener('click', () => {
+      enlarged.src = img.src;
+      enlarged.alt = img.alt;
+      viewer.style.display = 'flex';
+    });
+    img.addEventListener('contextmenu', e => e.preventDefault());
+  });
+
+viewer.addEventListener('click', () => {
+  viewer.style.display = 'none';
+  enlarged.removeAttribute('src');
+});
+viewer.addEventListener('contextmenu', e => e.preventDefault());
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    viewer.style.display = 'none';
+    enlarged.removeAttribute('src');
+  }
+});
+</script>
 </body>
 </html>
